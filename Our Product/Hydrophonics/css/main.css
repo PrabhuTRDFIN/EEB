@@ -9,6 +9,7 @@ body {
     line-height: 21px;
 	 font-size: 13px;
     color: #6a737b;
+    overflow-x: hidden !important;
   
 }
 
@@ -141,11 +142,8 @@ span.color {
 #navigation {
   border: 0 none;
   height: 60px;
-    -webkit-transition: background-color 800ms linear;
-       -moz-transition: background-color 800ms linear;
-	    -ms-transition: background-color 800ms linear;
-         -o-transition: background-color 800ms linear;
-			transition: background-color 800ms linear;
+  background-color:#0eb493;
+
 }
 
 .navbar-toggle i {
@@ -335,9 +333,7 @@ top: -8px;
 /*=========================================
 	Our Works
 ==========================================*/
-#works{
-  margin: 70px 0px;
-}
+
 .work-filter {
   margin-bottom: 35px;
 }
@@ -366,12 +362,14 @@ top: -8px;
 
 .mix {
     display: none;
+    overflow: hidden !important;
 }
 
 .work-item {
-   justify-content: space-between;
+    float: left;
     width: 25%;
     position: relative;
+    overflow: hidden;
 }
 
 .work-item > img {
@@ -379,16 +377,19 @@ top: -8px;
   height: auto;
   max-width: 100%;
   width: 90%;
+  height: 100%;
+  overflow: hidden !important;
 }
-.project-wrapper {
+.project-wrapper{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden !important;
 }
 .project-wrapper .mix{
   width: 30%;
-  padding: 10px;
+  padding: 20px;
 }
 
 .overlay {
@@ -450,6 +451,8 @@ top: -8px;
   font-size: 14px;
   line-height: 24px;
 }
+
+
 
 /*=========================================
 	Our Team Member
@@ -603,6 +606,16 @@ label.error {
 /*=========================================
 	Contact Us
 ==========================================*/
+@media (min-width:270px) and (max-width:366px){
+  #footer{
+    overflow-x: hidden !important;
+  }
+  .footer-icons #icon-footer{
+    padding-right: 30px !important;
+    overflow-x: hidden !important;
+    
+  }
+}
 @media (max-width:600px) {
   #footer .row .footer-single{
     margin-top: 0px !important;
@@ -615,13 +628,12 @@ label.error {
     margin-left: 30px !important;
   }
   .footer .footer-icons ul{
-  margin-top: 330px !important;
+  margin-top: 200px !important;
   display: flex;
   }
-  .footer .footer-icons ul{
-    margin-top: 220px !important;
+  .footer-icons  i{
+    font-size: 20px !important;
     
-  
   }
 }
 @media (min-width:601px) and (max-width:1024px){
@@ -634,6 +646,13 @@ label.error {
     margin-top: 40px !important;
     margin-left: 40px;
   }
+
+}
+@media (min-width:1024px) and (max-width:1199px){
+  .footer .footer-icons ul{
+    margin-top: 300px !important;
+  }
+
 
 }
 
@@ -697,21 +716,21 @@ label.error {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 
 }
 .footer-icons i{
   font-size: 25px;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 
 .footer-single li {
   line-height: 32px;
+  overflow-x: hidden;
 }
 
-.footer-single p i {
-  margin: 0 10px;
-}
 
 .credit a {
   color: #062033;

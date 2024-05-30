@@ -96,6 +96,31 @@
         dots: false,
         loop: true
     });
+
+    $(".phoneNew").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        items: 1,
+        dots: false,
+        loop: true
+    });
+
+    $('.x').click(function() {
+        $('.popup-bg').css('display', 'none');
+      });
+      
+    $('.accept-cookie').click(function(){
+        $('.cookie-notification').css('display' , 'none');
+    });
+
+    $('#popup').click(function() {
+        if(window.innerWidth > 600) {
+            $('#popup-lg').fadeIn();
+        } else {
+            $('#custom-popup').fadeIn();
+        }
+    })
+    
     
 })(jQuery);
 
@@ -183,14 +208,10 @@ $("#form").validate({
    });
 
 
-//    Team
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('close-popup').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default action
-        document.getElementById('popup').classList.add('hidden');
-    });
-});
+
+
+
 
 
 
